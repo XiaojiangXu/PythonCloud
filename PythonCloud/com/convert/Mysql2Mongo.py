@@ -11,9 +11,11 @@ from pymongo import MongoClient
 
 class Config:
     #tables = ['hs_card', 'hs_hero', 'hs_set', 'hs_skill', 'hs_level', 'hs_pack', 'hs_salesevent']
-    tables = ['user']
+    tables = ['user','sys_menu','sys_role']
     index = {
              'user': ['userId'],
+             'sys_menu':['menuId'],
+             'sys_role':['roleId']
     }
 
 class Mysql2Mongo(object):
@@ -84,7 +86,7 @@ class Mysql2Mongo(object):
         sql = """select * from  %s order by userId asc""" % (table)
         n = self.cursor.execute(sql)
         data = self.cursor.fetchall()
-        #print table, keys, types
+        print table, keys, types
         for row in data:
             ret = {}
             for k, key in enumerate(keys):

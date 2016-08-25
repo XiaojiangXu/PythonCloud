@@ -16,3 +16,4 @@ encoding//com/cloud/screenshot_test.py=utf-8
 encoding//com/cloud/sql_oracle.py=utf-8
 encoding//com/cloud/testcount.py=utf-8
 encoding//com/convert/Mysql2Mongo.py=utf-8
+encoding//com/convert/Mysql2MongoDemo.py=utf-8
